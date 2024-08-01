@@ -17,12 +17,37 @@
             margin:20px auto;
 
         }
+        .butn_container{
+            position: relative;
+            width: fit-content;
+            display: block;
+            margin: 10px auto;
+       }
+
+        .butn{
+            height: 40px;
+             background-color: white;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            position: absolute;
+            top: 120px;
+        }
+       .butn-left{
+            left:-30px;
+        }
+        .butn-right{
+            right:-30px; 
+        }
     </style>
 </head>
 <body>
     <h1 class="heading">Image Slider</h1>
+    <div  class="butn_container">
     <img src="img1.jpg" class="gallary-img" id="img">
-    
+    <img src="left.png" class="butn butn-left" onclick="prev()"/>
+        <img src="right.png" class="butn butn-right" onclick="next()"/>
+    </div>
 
     <script>
   const imageArray=[
