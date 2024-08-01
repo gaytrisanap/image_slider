@@ -56,6 +56,30 @@
             "img3.jpg",
             "img4.jpg",
         ];
+        let imageIndex = 0;
+        const imageElement = document.getElementById("img");
+        function prev(){
+            if(imageIndex ==0){
+                imageIndex = imageArray.length-1;
+            }
+            else{
+                imageIndex --;
+            }
+            imageElement.src=imageArray[imageIndex];
+        }
+
+        function next(){
+            if(imageIndex == imageArray.length-1){
+                imageIndex=0;
+            }
+            else{
+                imageIndex++;
+            }
+            
+            imageElement.src=imageArray[imageIndex];
+        }
+        setInterval(next,1000);
+
     </script>
 </body>
 
